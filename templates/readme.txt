@@ -1,0 +1,1 @@
+perbaiki rute gambar, css, dan js didalam template htmlnya

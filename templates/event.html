@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lib/animate/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}">
+        
+
+</head>
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+          <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+<div class="hero-header4">
+    <div class="col-lg-9 align-self-center text-center text-lg-start mb-lg-5">
+        <button onclick="goBack()" class="btn btn-lg btn-primary btn-lg-square btn-primary bi-arrow-left "></button>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+    <div class="kotak">
+        <form class="form1" action="/predict" method="post">
+            <h2 style="font-size: 20px;">From Harga Rumah</h2>
+
+            <label for="id">ID</label>
+            <input type="number"  class="form1" id="id" name="id"  min="1461" max="2919"><br><br>
+
+            <label for="mssubclass">Kelas Bangunan</label>
+            <input type="text" class="form1" id="mssubclass" name="mssubclass"><br><br>
+
+            <label for="lotarea">Ukuran Area</label>
+            <input type="text" class="form1" id="lotarea" name="lotarea" placeholder="Ukuran dalam satuan Square Feet"><br><br>
+
+            <label for="yearbuilt">Tahun Dibangun</label>
+            <input type="text" class="form1" id="yearbuilt" name="yearbuilt"><br><br>
+
+            <label for="salecondition">Kondisi Penjualan</label>
+            <input type="text" class="form1" id="salecondition" name="salecondition"><br><br>
+
+            <input type="submit" value="Predict">
+            
+        </form>
+        <div class="kotak">
+            <h2>Hasil Prediksi Harga Rumah</h2>
+    
+            
+            {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+            {% endif %} 
+    
+        </div>
+        
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='JS/main.js') }}"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var spinner = document.getElementById('spinner');
+            if (spinner) {
+                spinner.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>

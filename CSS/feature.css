@@ -1,0 +1,112 @@
+
+/* feature.css */
+
+
+/* Gaya untuk latar belakang */
+
+/* Gaya untuk header */
+header {
+    background-color:  #3498db ; /* Menggunakan variabel warna biru */
+    color: #f6f3f3; /* Warna teks header */
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px; /* Menambah jarak antara header dan form */
+}
+
+/* Gaya untuk body */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Menambahkan padding bawah pada body */
+}
+
+/* Gaya untuk kontainer */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+
+#filter-form {
+    margin-bottom: 40px; /* Menambahkan margin di bawah section */
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #f0eeee; /* Warna teks */
+    font-family: Arial, sans-serif; /* Jenis huruf */
+}
+
+/* Gaya untuk label */
+label {
+    display: block; /* Membuat label menjadi blok */
+    margin-bottom: 5px; /* Ruang bawah dari setiap label */
+    font-family: Arial, sans-serif; /* Jenis huruf */
+}
+
+/* Gaya untuk input */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Jenis huruf */
+}
+
+/* Gaya untuk tombol */
+input[type="submit"] {
+    width: auto;
+    padding: 12px 24px;
+    background-color: #007bff; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Jenis huruf */
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin:    100px auto 60px; /* Menambahkan margin top 20px, margin bottom 60px */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+option[disabled]:first-child {
+    color: #999; /* Ubah dengan warna yang diinginkan */
+
+}
+
